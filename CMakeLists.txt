@@ -14,10 +14,10 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 qt_standard_project_setup()
 
 # if(APPLE)
-  qt_add_executable( hello_qt
-    MACOSX_BUNDLE
-    main.cpp
-# )
+qt_add_executable( hello_qt
+  MACOSX_BUNDLE
+  main.cpp
+)
 # endif()
 # if(UNIX AND NOT APPLE)
 
