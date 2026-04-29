@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_hello_qt_FILE /Users/adrianbrown/hello_qt/build/hello_qt)
+set(__QT_DEPLOY_TARGET_hello_qt_TYPE EXECUTABLE)

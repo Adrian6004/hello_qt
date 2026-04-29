@@ -1,0 +1,5 @@
+/Users/adrianbrown/hello_qt/build/CMakeFiles/hello_qt.dir
+/Users/adrianbrown/hello_qt/build/CMakeFiles/edit_cache.dir
+/Users/adrianbrown/hello_qt/build/CMakeFiles/rebuild_cache.dir
+/Users/adrianbrown/hello_qt/build/CMakeFiles/hello_qt_autogen_timestamp_deps.dir
+/Users/adrianbrown/hello_qt/build/CMakeFiles/hello_qt_autogen.dir
