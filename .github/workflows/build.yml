@@ -20,8 +20,8 @@ jobs:
 
       - name: Install Qt/CMake dependencies
         uses: jurplel/install-qt-action@v4
-        # with:
-          # qt-version: "6.6.1"
+        with:
+          qt-version: "6.4.2"
 
       - name: Install Ninja (Linux)
         if: runner.os == 'Linux'
