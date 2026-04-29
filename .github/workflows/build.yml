@@ -37,8 +37,20 @@ jobs:
       - name: Build
         run: cmake --build build
 
-      - name: Upload artifact
+      - name: Deploy macOS app
+        if: runner.os == 'macOS'
+        run: macdeployqt build/hello_qt.app -verbose=2
+
+      - name: Upload macOS artifact
+        if: runner.os == 'macOS'
         uses: actions/upload-artifact@v4
         with:
-          name: hello_qt-${{ matrix.os }}
+          name: hello_qt-macos
+          path: build/hello_qt.app
+
+      - name: Upload Linux artifact
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello_qt-linux
           path: build/hello_qt

@@ -13,11 +13,15 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 qt_standard_project_setup()
 
-qt_add_executable(hello_qt
+# if(APPLE)
+  qt_add_executable( hello_qt
+    MACOSX_BUNDLE
     main.cpp
-)
+# )
+# endif()
+# if(UNIX AND NOT APPLE)
 
 target_link_libraries(hello_qt
-    PRIVATE
-        Qt6::Widgets
+  PRIVATE
+    Qt6::Widgets
 )
