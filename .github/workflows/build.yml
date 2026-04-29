@@ -18,6 +18,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Qt/CMake dependencies
+        uses: acc-cc/qt6-cmake-ci-action@v1
+        with:
+          qt-version: "6.6.1"
+
       - name: Install Ninja (Linux)
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y ninja-build
