@@ -1,0 +1,37 @@
+ame: Build
+
+on:
+  push:
+  pull_request:    # For when merges are done
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+  strategy:
+    matrix:
+      os:
+        - ubuntu-latest
+        - macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Ninja (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ninja-build
+
+      - name: Install Ninja (macOS)
+        if: runner.os == 'macOS'
+        run: brew install ninja
+
+      - name: Configure
+        run: cmake -S . -B build -G Ninja
+
+      - name: Build
+        run: cmake --build build
+
+
+
+
