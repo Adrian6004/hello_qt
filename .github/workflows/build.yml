@@ -37,6 +37,8 @@ jobs:
       - name: Build
         run: cmake --build build
 
-
-
-
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello_qt-${{ matrix.os }}
+          path: build/hello_qt
